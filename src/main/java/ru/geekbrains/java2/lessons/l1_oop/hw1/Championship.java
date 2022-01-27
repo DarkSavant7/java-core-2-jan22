@@ -10,7 +10,7 @@ public class Championship {
     //У препятствий есть длина (для дорожки) или высота (для стены), а участников ограничения на бег и прыжки.
     // Если участник не смог пройти одно из препятствий, то дальше по списку он препятствий не идет.
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Participant[] participants = {
                 new Cat("Barsik", 1500, 300),
                 new Cat("Murzik", 1700, 220),
@@ -32,6 +32,9 @@ public class Championship {
         for (Participant p : participants) {
             for (Trap t : traps) {
                 if (!t.overcome(p)) break;
+                if (p.getName().equals("R2D2")) {
+                    Thread.sleep(3000);
+                }
             }
         }
     }
