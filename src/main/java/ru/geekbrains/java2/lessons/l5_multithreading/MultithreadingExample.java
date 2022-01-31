@@ -1,4 +1,4 @@
-package ru.geekbrains.java2.lessons.l4_multithreading;
+package ru.geekbrains.java2.lessons.l5_multithreading;
 
 public class MultithreadingExample {
 
